@@ -29,7 +29,7 @@ settings():
     speech.timeout = 0.175
     speech.record_all = 1
     #speech.gain = 100
-    speech.normalize = 1
+    #speech.normalize = 1
 
     # Adjust how sensitive picking up commands are.
     # XXX - what is the default?

@@ -955,12 +955,16 @@ class Actions:
         """run a given list of commands in command mode, preserve INSERT"""
         v = VimMode()
         v.set_command_mode_exterm()
+        has_new_line = (cmd[-1] == "\n")
+        if has_new_line:
+            cmd = cmd[:-1]
+            
         if cmd[0] == ":":
             actions.user.paste(cmd[1:])
         else:
             actions.user.paste(cmd)
         # pasting a newline doesn't apply it
-        if cmd[-1] == "\n":
+        if has_new_line:
             actions.key("enter")
 
     # Sometimes the .talon file won't know what mode to run something in, just

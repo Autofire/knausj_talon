@@ -477,10 +477,10 @@ make ascending: user.vim_normal_mode_key("g ctrl-a")
 (light|highlight) line: user.vim_visual_mode("V")
 block (light|highlight): user.vim_any_motion_mode_exterm_key("ctrl-v")
 
-(light|highlight) <user.vim_light_motion>:
-    user.vim_visual_mode("{vim_light_motion}")
-block (light|highlight) <user.vim_light_motion>:
-    user.vim_visual_block_mode("{vim_light_motion}")
+#(light|highlight) <user.vim_light_motion>:
+#    user.vim_visual_mode("{vim_light_motion}")
+#block (light|highlight) <user.vim_light_motion>:
+#    user.vim_visual_block_mode("{vim_light_motion}")
 
 
 (light|highlight) lines <number> through <number>:
